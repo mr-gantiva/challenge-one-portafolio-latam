@@ -12,7 +12,10 @@ coloque nas sessões indicadas*/
   --bg-lighblue: #eaf2fd;
   --color-texto-ppal: #464646;
   --bg-button-blue: #2a7ae4;
-  --bg-white: #ffffff;
+  --bg-white: #e6edf3;
+  --bg-dark: #202b38;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
 body {
@@ -184,6 +187,16 @@ section.title {
       gap: 30px;
       padding: 0;
     }
+    & .section__text__p2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+
+      overflow: hidden;
+      border-right: 0.15em solid orange;
+      white-space: nowrap;
+      animation: typing 1.5s steps(20, end) forwards, blinking 0.75s infinite;
+    }
   }
 }
 
@@ -219,9 +232,13 @@ section.skills {
 /*Sección About*/
 
 section.about {
-  background: var(--bg-lighblue);
+  background: var(--bg-dark);
+  color: var(--bg-white);
   & .about__paragraph {
     width: 100%;
+  }
+  & img {
+    filter: invert();
   }
 }
 
@@ -254,7 +271,8 @@ section.hobbies {
 /* Experiencia Académica*/
 
 section.academic {
-  background: var(--bg-lighblue);
+  background: var(--bg-dark);
+  color: var(--bg-white);
   & .academic__title {
     text-align: center;
   }
@@ -355,7 +373,8 @@ section.experience {
 /*Contacto*/
 
 section.formcontato {
-  background: var(--bg-lighblue);
+  background: var(--bg-dark);
+  color: var(--bg-white);
   & .formcontato__contacto {
     display: flex;
     justify-content: space-between;
